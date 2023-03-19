@@ -11,12 +11,18 @@ se.extend(s)
 
 SN = []
 for x in range (0,len(se)):
-    if ((x+1)%2) == 0 :
+    if (x%2) == 0 :
         num = all.index(se[x])
-        SN.append(all[num+n1])    
+        num= num+n1
+        if num > 51:
+            num= num-52
+        SN.append(all[num])    
     else:
         num = all.index(se[x])
-        SN.append(all[num+n2])
+        num = num+n2
+        if num > 51:
+            num = num-52
+        SN.append(all[num])
 
 SN = ''.join(SN)
 
